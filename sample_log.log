@@ -1,0 +1,21 @@
+2026-03-13 19:37:50,339 - INFO - Bybit client initialized successfully
+2026-03-13 19:37:50,339 - INFO - API Request for Market order | BTCUSDT | Buy | Quantity: 0.001
+2026-03-13 19:37:50,813 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410871480}
+2026-03-13 19:38:27,730 - INFO - Bybit client initialized successfully
+2026-03-13 19:38:27,744 - INFO - API Request for Market order | BTCUSDT | Sell | Quantity: 0.001
+2026-03-13 19:38:28,189 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410908757}
+2026-03-13 19:38:37,804 - INFO - Bybit client initialized successfully
+2026-03-13 19:38:37,804 - INFO - API Request for Limit order | BTCUSDT | Buy | Quantity: 0.001 | Price: 20000.0
+2026-03-13 19:38:38,138 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410918902}
+2026-03-13 19:38:44,612 - INFO - Bybit client initialized successfully
+2026-03-13 19:38:44,612 - INFO - API Request for Limit order | BTCUSDT | Sell | Quantity: 0.001 | Price: 20000.0
+2026-03-13 19:38:45,084 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410925801}
+2026-03-13 19:38:48,502 - INFO - Bybit client initialized successfully
+2026-03-13 19:38:48,502 - INFO - API Request for Limit order | BTCUSDT | Sell | Quantity: 0.001 | Price: 20000.0
+2026-03-13 19:38:48,682 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410929460}
+2026-03-13 19:39:04,269 - INFO - Bybit client initialized successfully
+2026-03-13 19:39:04,269 - INFO - API Request for Stop_Limit order | BTCUSDT | Buy | Quantity: 0.001 | Price: 64900.0 | Stop_Price: 65000.0
+2026-03-13 19:39:04,748 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410945473}
+2026-03-13 19:39:13,177 - INFO - Bybit client initialized successfully
+2026-03-13 19:39:13,177 - INFO - API Request for Stop_Limit order | BTCUSDT | Sell | Quantity: 0.001 | Price: 64900.0 | Stop_Price: 65000.0
+2026-03-13 19:39:13,652 - INFO - API Response: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1773410954361}
