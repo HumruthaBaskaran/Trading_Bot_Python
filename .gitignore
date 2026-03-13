@@ -1,1 +1,2 @@
-"*.log"
+*.log
+!sample_logs.log
