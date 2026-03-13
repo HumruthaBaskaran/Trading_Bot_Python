@@ -2,10 +2,11 @@ import argparse
 from bot.client import BybitClient
 from bot.orders import place_limit_order,place_market_order,place_stop_limit_order
 from bot.validators import validateOrderType,validateSide
+import os
 
+API_KEY = os.environ.get("BYBIT_API_KEY")
+API_SECRET = os.environ.get("BYBIT_API_SECRET")
 
-API_KEY = "P9jkyWcol8jVdmIanR"
-API_SECRET = "0x6UGS6KVtoKrZtoqixCCkUISnXsQJ00Xz2a"
 
 def print_order_summery(args):
     print("\n========ORDER SUMMERY========")

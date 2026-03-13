@@ -4,4 +4,4 @@ def validateSide(side):
 
 def validateOrderType(type):
     if type.lower() not in ['market','limit','stop_limit']:
-        raise ValueError("Invalid Order Type. MUST be  Market or Limit")
+        raise ValueError("Invalid Order Type. MUST be  Market or Limit or Stop_Limit")
