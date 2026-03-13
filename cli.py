@@ -17,14 +17,14 @@ def print_order_summery(args):
         print("PRICE   :",args.price)
     print("================================\n")
 
-def print_order_responce(orderId,data):
+def print_order_response(orderId,data):
     
     # print(data)
     status = data["orderStatus"]
     executedQty = data["cumExecQty"]
     avgPrice = data["avgPrice"]
 
-    print("\n========ORDER RESPONCE========")
+    print("\n========ORDER response========")
     print("ORDER ID       :",orderId)
     print("ORDER STATUS   :",status)
     print("ORDER QUANTITY :",executedQty)
@@ -53,14 +53,14 @@ def main():
         validateOrderType(args.type)
         print_order_summery(args)
         if args.type.lower() == "market":
-            responce = place_market_order(
+            response = place_market_order(
                 client=client,
                 symbol=args.symbol,
                 side=args.side,
                 qty=args.qty
             )
         elif args.type.lower() == "limit":
-            responce = place_limit_order(
+            response = place_limit_order(
                 client=client,
                 symbol=args.symbol,
                 side=args.side,
@@ -68,7 +68,7 @@ def main():
                 price=args.price
             )
         elif args.type.lower() == "stop_limit":
-            responce = place_stop_limit_order(
+            response = place_stop_limit_order(
                 client=client,
                 symbol=args.symbol,
                 side=args.side,
@@ -77,7 +77,7 @@ def main():
                 stopPrice = args.stopPrice
             )
         
-        orderId = responce['result']['orderId']
+        orderId = response['result']['orderId']
 
         order_info = client.get_open_orders(
             category = "linear",
@@ -85,7 +85,7 @@ def main():
             orderId=orderId
 
         )
-        print_order_responce(orderId,order_info['result']['list'][0])
+        print_order_response(orderId,order_info['result']['list'][0])
 
         print("✅ Order placed successfully")
     except ValueError as v:
