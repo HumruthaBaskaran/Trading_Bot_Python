@@ -1,40 +1,35 @@
-Trading Bot – Futures Order CLI
+# Trading Bot – Futures Order CLI
 
 A Python CLI application that places Market and Limit orders on the Bybit Futures Testnet.
 
 The project demonstrates:
 
-API integration with a crypto exchange
+* API integration with a crypto exchange
+* CLI-based order placement
+* structured code architecture
+* logging and error handling
 
-CLI-based order placement
+---
 
-structured code architecture
+## Features
 
-logging and error handling
+* Place **Market orders**
+* Place **Limit orders**
+* Place **Stop-Limit orders** (bonus feature)
+* Supports **BUY and SELL**
+* CLI input validation
+* Structured logging of:
 
-Features
+  * API requests
+  * API responses
+  * errors
+* Clean modular architecture
 
-Place Market orders
+---
 
-Place Limit orders
+## Project Structure
 
-Place Stop-Limit orders (bonus feature)
-
-Supports BUY and SELL
-
-CLI input validation
-
-Structured logging of:
-
-API requests
-
-API responses
-
-errors
-
-Clean modular architecture
-
-Project Structure
+```
 trading_bot/
 │
 ├─ bot/
@@ -46,67 +41,111 @@ trading_bot/
 ├─ cli.py                # CLI entry point
 ├─ requirements.txt
 ├─ README.md
+```
 
+---
 
-Setup
-1. Clone the repository
-git clone <repository_url>
+## Setup
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/HumruthaBaskaran/Trading_Bot_Python.git
 cd trading_bot
-2. Create a virtual environment
+```
+
+### 2. Create a virtual environment
+
+```
 python -m venv venv
+```
 
 Activate it:
 
 Windows
 
+```
 venv\Scripts\activate
+```
 
 Mac/Linux
 
+```
 source venv/bin/activate
+```
 
-3. Install dependencies
+---
+
+### 3. Install dependencies
+
+```
 pip install -r requirements.txt
+```
 
-4. Configure API credentials
+---
 
-Create API keys from the Bybit Testnet and add them in cli.py.
+### 4. Configure API credentials
 
-Running the Application
+Create API keys from the Bybit Testnet and add them in `cli.py`.
 
-Market Order
+---
+
+## Running the Application
+
+### Market Order
+
+```
 python cli.py --symbol BTCUSDT --side Buy --type MARKET --quantity 0.001
+```
 
-Limit Order
+---
+
+### Limit Order
+
+```
 python cli.py --symbol BTCUSDT --side Buy --type LIMIT --quantity 0.001 --price 60000
+```
 
-Stop-Limit Order (Bonus)
+---
+
+### Stop-Limit Order (Bonus)
+
+```
 python cli.py --symbol BTCUSDT --side Sell --type STOP_LIMIT --quantity 0.001 --price 64900 --stop_price 65000
+```
 
-Logging
+---
+
+## Logging
 
 All API requests, responses, and errors are logged to:
 
+```
 trading_bot.log
+```
 
 Example log entry:
 
+```
 INFO - API REQUEST: MARKET order BTCUSDT Buy qty=0.001
 INFO - API RESPONSE: {...}
+```
 
-Error Handling
+---
+
+## Error Handling
 
 The application handles:
 
-Invalid CLI input
-
-API request errors
-
-Network failures
+* Invalid CLI input
+* API request errors
+* Network failures
 
 Errors are displayed to the user and logged.
 
-Assumptions
+---
+
+## Assumptions
 
 The original assignment required using the Binance Futures Testnet.
 However, Binance Testnet currently requires identity verification in my region.
@@ -116,12 +155,16 @@ To proceed with the assignment, the implementation uses the Bybit Testnet API in
 The application architecture is exchange-agnostic.
 Switching to Binance would only require modifying the client implementation.
 
-Requirements
+---
 
-Python 3.x
+## Requirements
 
-pybit
+* Python 3.x
+* pybit
 
 Install using:
 
+```
 pip install -r requirements.txt
+```
+
